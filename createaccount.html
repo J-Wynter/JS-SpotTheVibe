@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<htm>
+    <head>
+       
+        <link rel="stylesheet" type="text/css" href="styles/general.css">
+        <link rel="icon" type="image/png" href="images/spotlogo.png"/>
+        <title>Create Account</title>
+
+
+    </head>
+    <body>
+        <!--Navigation bar  -->
+        <div class="navbar">
+            <a href="website.html"><img src="images/spotlogo.png" class="logo"></a>
+            <ul>
+                <li><a href="rules.html">rules</a></li>
+                <li><a href="leaderboards.html">leaderboards</a></li>
+                <li><a href="login.html">login</a></li>
+                <li><a href="createaccount.html"><span style="color:#1DB954">Create account</span></a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+            <!--MAIN CONTENT ON PAGE-->
+        </div>
+            <div class="contentborder" id="createborder">
+                <h1>
+                    Create Account
+                </h1>
+                <label for="email">Enter your email, phone number and create your password below:</label>
+                <input class="emailaddress" id="email" type="email" 
+                minlenghth="4"
+                maxlenth="32"
+                placeholder="BillBob@example.com"
+                value=""
+                
+                />
+                <input class="password" id="password" type="password"
+                placeholder="Enter Password"
+                value=""
+                />
+                <input class="phone" id="phone" type="tel"
+                minlength="11"
+                maxlength="11"
+                value=""
+                placeholder="Register Phone number"/>
+                <input class="userName" id="username" type="text"
+                value=""
+                placeholder="Username"/>
+
+                <input class="submit" onclick="validation()" id="submit" type="submit" value="Create"/>
+            </div>
+
+        
+            <script src="./register2.js"></script>
+    </body>
+</html>

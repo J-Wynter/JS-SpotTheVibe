@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles/leaderboards.css">
+    <link rel="stylesheet" type="text/css" href="styles/general.css">
+    <link rel="game" href="">
+    <title>Leaderboards</title>
+    <link rel="icon" type="image/png" href="images/spotlogo.png" />
+</head>
+
+<body>
+    <!--Navigation bar  -->
+    <header class="navbar">
+        <a href="website.html"><img src="images/spotlogo.png" class="logo"></a>
+        <ul>
+            <li><a href="rules.html">rules</a></li>
+            <li><a href="leaderboards.html"><span style="color:#1DB954">Leaderboards</span></a></li>
+            <li><a href="login.html">login</a></li>
+            <li><a href="createaccount.html">create account</a></li>
+            <li><a href="settings.html">Settings</a></li>
+        </ul>
+    </header>
+    <div class="leadborder">
+        <h1>
+            Leaderboards
+        </h1>
+    </div>
+    <div id="leaderboard"> </div>
+
+</body>
+
+</html>
+
+<script>
+    const keys = Object.keys(localStorage);
+    keys.sort((a, b) => {
+        const userA = JSON.parse(localStorage[a]);
+        const userB = JSON.parse(localStorage[b]);
+        return userB.topScore - userA.topScore;
+    });
+    let tableStr = `<table class="content-table">
+                 <thead>
+                     <tr>
+                         <th>Pos</th>
+                         <th>Username</th>
+                         <th>Medal</th>
+                         <th>Phone Number</th>
+                         <th>Email</th>
+                         <th>Score</th>
+                     </tr>
+                 </thead>
+                 <tbody>`;
+
+    // Iterate through localStorage keys
+    keys.forEach((key, index) => {
+        const user = JSON.parse(localStorage[key]);
+        const position = index + 1;
+
+        tableStr += `<tr>
+                 <td id="pos${position}">${position}</td>
+                 <td id="name${position}">${user.username}</td>
+                 <td id="medal${position}">${getMedal(position)}</td>
+                 <td id="phone${position}">${user.phone}</td>
+                 <td id="email${position}">${user.email}</td>
+                 <td id="score${position}">${user.topScore}</td>
+             </tr>`;
+    });
+
+    tableStr += `</tbody></table>`;
+
+    // Display the table in the "leaderboard" div
+    document.getElementById("leaderboard").innerHTML = tableStr;
+
+    // Function to determine the medal based on position
+    function getMedal(position) {
+        switch (position) {
+            case 1:
+                return "Gold";
+            case 2:
+                return "Silver";
+            case 3:
+                return "Bronze";
+            default:
+                return "Wood";
+        }
+    }
+
+</script>
+
+
+
+</body>
+
+</html>

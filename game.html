@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles/game.css">
+    <link rel="stylesheet" type="text/css" href="styles/general.css">
+    <link rel="icon" type="image/png" href="images/spotlogo.png" />
+
+    <body>
+        <!--Navigation bar  -->
+        
+        <header class="navbar">
+            <a href="website.html"><img src="images/spotlogo.png" class="logo"></a>
+            <ul>
+                <li><a href="rules.html">rules</a></li>
+                <li><a href="leaderboards.html">leaderboards</a></li>
+                <li><a href="login.html">login</a></li>
+                <li><a href="createaccount.html">create account</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <a href="website.html"><h2 class="SpotTitle2">
+                SPOT THE VIBE <br> <span style="font-size:30px">Play Again</span> 
+            </h2></a>
+            <!--Content on page-->
+            <div id="questionDiv"></div>
+        </div>
+        <div class="gameslidecontainer">
+          <!--volume slider-->
+        <input type="range" value="50" id="volume" class="gameslider">
+          </div>
+
+        
+        
+        <script src="./game.js"></script>
+    </body>
+</head>

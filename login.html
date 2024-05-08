@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<htm>
+    <head>
+
+        <link rel="stylesheet" type="text/css" href="styles/general.css">
+        <link rel="icon" type="image/png" href="images/spotlogo.png"/>
+        <title>Login</title>
+
+
+    </head>
+    <body>
+        <!--Navigation bar  -->
+        <div class="navbar">
+            <a href="website.html"><img src="images/spotlogo.png" class="logo"></a>
+            <ul>
+                <li><a href="rules.html">rules</a></li>
+                <li><a href="leaderboards.html">leaderboards</a></li>
+                <li><a href="#"><span style="color:#1DB954">login</span></a></li>
+                <li><a href="createaccount.html">Create account</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+        </div>
+            <div class="contentborder">
+                <h1>
+                    Login
+                </h1>
+                <label for="LoginEmail">Enter your email or phone number along with your password below:</label>
+                <input class="emailaddress" id="LoginEmail" type="email" 
+                minlenghth="4"
+                maxlenth="32"
+                placeholder="BillBob@example.com"
+                required
+                />
+                <input class="password" id="LoginPassword" type="password"
+                minlength="6" 
+                maxlength="24"
+                placeholder="Enter Password"
+                required/>
+                <input class="phone" id="LoginPhone" type="tel"
+                minlength="11"
+                maxlength="11"
+                placeholder="Enter Phone number"/>
+                <input class="submit" id="LoginBtn" onclick="check()" type="submit" value="Login"/>
+                <input class="submit2" id="LogOutBtn" onclick="Logout()" type="submit" value="Log out"/>
+
+                <input class="userName" id="LoginName" type="text"
+                maxlength="12"
+                placeholder="Enter Username:"/>
+
+            </div>
+        
+        <script  src="./register2.js"></script>
+    </body>
+</html>
