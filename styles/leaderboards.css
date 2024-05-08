@@ -1,0 +1,62 @@
+ /*Leaderboard postioning and border type*/
+
+
+ .leadborder {
+     display: inline-block;
+     position: absolute;
+     bottom: 750px;
+     width: 100%;
+     position: absolute;
+     top: 15%;
+     transform: translateY(-50%);
+     text-align: center;
+     color: #1DB954;
+ }
+
+ .leadborder h1 {
+     font-size: 40px;
+     font-weight: 700;
+     margin-bottom: 0;
+ }
+ /*Leaderboard content styling*/
+
+ .content-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    position: relative;
+     right: -450px;
+     bottom: -110px;
+     color: #ffffff;
+}
+
+.content-table thead tr {
+    background-color: #1DB954;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+    padding: 12px 15px;
+}
+
+.content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr {
+    background-color: transparent;
+    opacity: 90%;
+}
+
+.content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #1DB954;
+}
+
+

@@ -1,0 +1,101 @@
+.audioplayer{visibility: hidden;}
+.SpotTitle2{
+    color: #1DB954;
+    transition: 0.3s;
+    display: inline-block;
+    line-height: 50px;
+    margin: 0%;
+    
+    padding-top: 15%;
+}
+.SpotTitle2:hover{
+    color: #0cf25c;
+}
+
+.GameContainer button{
+padding: 10px 20px;
+font-size: large;
+font-weight: bold;
+background-color: transparent;
+border-color:#1DB954;
+border-radius: 10px;
+color: white;
+transition: 0.8s;
+}
+.GameContainer button:hover{
+    
+    border-color: #0cf25c;
+}
+
+
+h3 {font-size: 50px; padding: 0px; margin: 0;}
+h4 {font-size: 25px; text-shadow: 2px 2px #000000;}
+h5 {
+    font-size: 35px;
+    padding-bottom: 1%;
+    margin: 0;}
+
+.gameslidecontainer {
+    width: 100%;
+    /* Width of the outside container */
+}
+
+/* The slider itself */
+.gameslider {
+    -webkit-appearance: none;
+    /* Override default CSS styles */
+    appearance: none;
+    width: 15%;
+    /* Full-width */
+    height: 15px;
+    /* Specified height */
+    position: absolute;
+    right: 1130px;
+    bottom: 100px;
+    background: #d3d3d3;
+    /* Grey background */
+    outline: none;
+    opacity: 0.7;
+    /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s;
+    /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+    border-radius: 20px;
+}
+
+/* Mouse-over effects */
+.gameslider:hover {
+    opacity: 1;
+    /* Fully shown on mouse-over */
+}
+
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.gameslider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    /* Override default look */
+    appearance: none;
+    width: 25px;
+    /* Set a specific slider handle width */
+    height: 25px;
+    /* Slider handle height */
+    background: #1DB954;
+    /* Green background */
+    cursor: pointer;
+    /* Cursor on hover */
+    border-radius: 20px;
+}
+
+.gameslider::-moz-range-thumb {
+    width: 25px;
+    /* Set a specific slider handle width */
+    height: 25px;
+    /* Slider handle height */
+    background: #1DB954;
+    /* Green background */
+    cursor: pointer;
+    /* Cursor on hover */
+}
+.video{
+    display: inline-block;
+}
